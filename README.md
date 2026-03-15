@@ -1,12 +1,36 @@
-# Active-Directory-Homelab
+# Active-Directory-Homelab-Part-1
 Author: Christian Garces
 ------------------------
+## Lab Overview
+--------
+This lab builds a functional Active Directory domain environment using a Windows Server 2022 virtual machine acting as the domain controller. The environment demonstrates how enterprise identity infrastructure is deployed and managed, including domain creation, directory structure organization, user and group provisioning, authentication policy enforcement, and resource access control. The lab also introduces automation through PowerShell to simulate scalable account provisioning and administrative workflows commonly used in enterprise environments.
+
+**Skills Applied**
+- Deploying Windows Server 2022 in a virtualized KVM environment
+- Configuring server networking, including static IP addressing and DNS settings
+- Installing and configuring Active Directory Domain Services (AD DS)
+- Promoting a server to a Domain Controller and creating a new Active Directory forest (lab.local)
+- Configuring DNS forwarding for external name resolution
+- Designing and implementing an Organizational Unit (OU) structure for directory organization
+- Creating and managing Active Directory security groups for role-based access control
+- Provisioning domain user accounts and managing identity objects within Active Directory
+- Assigning users to security groups to implement Role-Based Access Control (RBAC)
+- Automating user provisioning using PowerShell and Active Directory modules
+- Implementing domain-wide authentication policies using Group Policy Objects (GPOs)
+- Enforcing password complexity and account lockout protections to mitigate brute-force attacks
+- Applying and verifying Group Policy enforcement using administrative command-line tools
+- Creating and managing departmental shared resources within Windows Server
+- Configuring NTFS permissions and share permissions based on Active Directory group membership
+- Implementing RBAC-based access control to restrict resource access by organizational role
+
 ### Lab Environment
+----------------
 - **Virtualization**: Linux KVM, Virt-Manager
 - **Virtual Machines**: Windows Server 2022 VM (Domain Controller), Windows 10/11 Client
 - **Network Configuration**: NAT - Virtual Network: Default
 
 ### Windows Server Configuration & Install
+-------------------
 - **Model**: Host-Passthrough (Copies Host CPU Configuration)
 - **NIC**: Network Source -> NAT, Device Model -> Virtio
 - **Operating System Setup** - Windows Server 2022 Standard Evaluation (Desktop Experience)
@@ -405,3 +429,6 @@ Although the screenshots demonstrate the configuration for one group, the same p
 
 ### Conclusion
 -------------
+This lab demonstrates the foundational architecture of an Active Directory environment and how centralized identity management is implemented in enterprise networks. By deploying a domain controller, organizing directory objects with Organizational Units, enforcing authentication policies with Group Policy, and controlling resource access through security groups, the environment models the core principles of enterprise identity and access management.
+
+The lab also highlights how administrative tasks such as user provisioning can be automated with PowerShell, reflecting real-world operational practices used to manage large-scale directory environments. Together, these components illustrate how Active Directory provides centralized authentication, authorization, and policy enforcement across a domain infrastructure.
